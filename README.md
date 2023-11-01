@@ -29,7 +29,7 @@ $ make run
 
 *Completar
 
-Documentação
+### Documentação
 É necessário ter na raiz do projeto um arquivo Doxyfile. Um arquivo padrão pode ser gerado pelo comando:
 
 $ doxygen -g
