@@ -1,7 +1,7 @@
-#ifndef CRUZADOR_HPP
-#define CRUZADOR_HPP
+#ifndef CRUZADOR_H
+#define CRUZADOR_H
 
-#include "Navio.hpp"
+#include "Navio.h"
 
 /**
  * @brief Classe que representa um cruzador, um tipo de navio do jogo de batalha naval.

@@ -1,4 +1,4 @@
-#include "Contratorpedeiro.hpp"
+#include "Contratorpedeiro.h"
 
 Contratorpedeiro::Contratorpedeiro()
    {

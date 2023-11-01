@@ -1,7 +1,7 @@
-#ifndef CONTRATORPEDEIRO_HPP
-#define CONTRATORPEDEIRO_HPP
+#ifndef CONTRATORPEDEIRO_H
+#define CONTRATORPEDEIRO_H
 
-#include "Navio.hpp"
+#include "Navio.h"
 
 /**
  * @brief Classe que representa um contratorpedeiro, um tipo de navio do jogo de batalha naval.
