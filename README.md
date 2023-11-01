@@ -27,7 +27,7 @@ $ make run
 
 ### Compilação Testes
 
-//A fazer
+*Completar
 
 Documentação
 É necessário ter na raiz do projeto um arquivo Doxyfile. Um arquivo padrão pode ser gerado pelo comando:
@@ -99,7 +99,7 @@ As regras são:
 
 ### Dificuldades
 
-//A fazer
+*Completar
 
 ### Autores
 
