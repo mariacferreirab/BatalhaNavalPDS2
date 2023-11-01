@@ -33,6 +33,7 @@ $ make run
 É necessário ter na raiz do projeto um arquivo Doxyfile. Um arquivo padrão pode ser gerado pelo comando:
 
 $ doxygen -g
+
 Abaixo a lista de flags que foram modificadas no arquivo original.
 
 PROJECT_NAME = "BatalhaNavalPDS2"
