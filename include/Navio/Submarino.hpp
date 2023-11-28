@@ -1,7 +1,7 @@
 #ifndef SUBMARINO_H
 #define SUBMARINO_H
 
-#include "Navio.h"
+#include "Navio.hpp"
 
 /**
  * @brief Classe que representa um submarino, um tipo de navio do jogo de batalha naval.
