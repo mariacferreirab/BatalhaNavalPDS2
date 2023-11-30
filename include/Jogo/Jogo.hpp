@@ -1,22 +1,22 @@
-#ifndef GAME_H
-#define GAME_H
+#ifndef JOGO_HPP
+#define JOGO_HPP
 
-#include "Tabuleiro.h"
-#include "Navio.h"
+#include "Tabuleiro.hpp"
+#include "Navio.hpp"
 #include <fstream>
 
 /**
-@brief Classe Game usada para gerenciar o jogo e seus componentes.
+@brief Classe Jogo usada para gerenciar o jogo e seus componentes.
 */
-class Game {
+class Jogo {
 private:
 Tabuleiro jogador1; // Tabuleiro do jogador 1
 Tabuleiro jogador2; // Tabuleiro do jogador 2
 public:
 /**
-* @brief Construtor padrão. Cria um novo objeto Game.
+* @brief Construtor padrão. Cria um novo objeto Jogo.
 */
-Game();
+Jogo();
 /**
  * @brief Define o tabuleiro do jogo para um jogador específico.
  * @param jogador O tabuleiro a ser definido.
