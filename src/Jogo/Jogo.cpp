@@ -1,10 +1,10 @@
-#include "Game.h"
+#include "Jogo.h"
 
-Game::Game()
+Jogo::Jogo()
 {
 }
 
-void Game::setTabuleiro(const Tabuleiro& jogador, int numero)
+void Jogo::setTabuleiro(const Tabuleiro& jogador, int numero)
 {
     if (numero == 1)
     {
@@ -16,7 +16,7 @@ void Game::setTabuleiro(const Tabuleiro& jogador, int numero)
     }
 }
 
-Tabuleiro& Game::getTabuleiro(int numero)
+Tabuleiro& Jogo::getTabuleiro(int numero)
 {
     if (numero == 1)
     {
@@ -27,7 +27,7 @@ Tabuleiro& Game::getTabuleiro(int numero)
         return jogador2;
     }
 }
-void Game::salvarJogo(std::string filename)
+void Jogo::salvarJogo(std::string filename)
 {
     std::ofstream file(filename);
     if (file.is_open())
@@ -67,7 +67,7 @@ void Game::salvarJogo(std::string filename)
     }
 }
 
-void Game::carregarJogo(std::string filename)
+void Jogo::carregarJogo(std::string filename)
 {
     std::ifstream file(filename);
     if (file.is_open())
