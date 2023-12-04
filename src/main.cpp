@@ -3,7 +3,7 @@
 #include <thread>
 
 #include "Tabuleiro.hpp"
-#include "Game.hpp"
+#include "Jogo.hpp"
 
 
 // void waitForSeconds(int seconds)
