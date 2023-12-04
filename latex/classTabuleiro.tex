@@ -1,0 +1,263 @@
+\hypertarget{classTabuleiro}{}\doxysection{Tabuleiro Class Reference}
+\label{classTabuleiro}\index{Tabuleiro@{Tabuleiro}}
+
+
+Classe que representa o tabuleiro do jogo de batalha naval.  
+
+
+
+
+{\ttfamily \#include $<$Tabuleiro.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}{Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \mbox{\hyperlink{classTabuleiro}{Tabuleiro}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTabuleiro_a6178bf7e909d4d2edc9e0ea8f9a5abb8}{get\+Nome}} ()
+\item 
+void \mbox{\hyperlink{classTabuleiro_a1f2938baab531a89f5e18301255695b5}{set\+Nome}} (std\+::string \mbox{\hyperlink{classTabuleiro_ad02a6b63f37c81ee0406e687f33e87e9}{nome}})
+\item 
+char($\ast$ \mbox{\hyperlink{classTabuleiro_aeea01d15d87fc8c02f25817472c529f2}{get\+Tabuleiro}} ())\mbox{[}10\mbox{]}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classNavio}{Navio}} $\ast$ $>$ \mbox{\hyperlink{classTabuleiro_a3daf1d20708a00eb111b920d4c7d1c1f}{get\+Navios}} () const
+\item 
+void \mbox{\hyperlink{classTabuleiro_a07bebda1e168c66ebc03c3e5928f744a}{set\+Navios}} (const std\+::vector$<$ \mbox{\hyperlink{classNavio}{Navio}} $\ast$ $>$ \&\mbox{\hyperlink{classTabuleiro_a00b75b6b3969362cf6578769010b804e}{navios}})
+\item 
+bool \mbox{\hyperlink{classTabuleiro_a21a744fa5191f8b1be2b8e7f7dbc5262}{pode\+Posicionar\+Navio}} (\mbox{\hyperlink{classNavio}{Navio}} $\ast$navio)
+\begin{DoxyCompactList}\small\item\em Verifica se é possível posicionar um navio no tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTabuleiro_a9abbedce5873229a003f552f5f4a8542}{posicionar\+Navios}} ()
+\begin{DoxyCompactList}\small\item\em Posiciona os navios no tabuleiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTabuleiro_a2e3d79973ee48861fe34ffdde72dd393}{posicionar\+Navios\+Randomly}} ()
+\begin{DoxyCompactList}\small\item\em Posiciona os navios aleatoriamente no tabuleiro. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTabuleiro_a9d6bef6bb578047b989598abafcceab5}{atirar}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Realiza um tiro no tabuleiro. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTabuleiro_ae6cc4777e3477acc06b93e76c61ca277}{afundou\+Tudo}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se todos os navios do tabuleiro foram afundados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTabuleiro_a40a471465e6f3271f961ac72227c1ac4}{print\+Tabuleiro\+Navio}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o tabuleiro com a posição dos navios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTabuleiro_a10b2f905afbdd33b7121ca44160bcdbe}{print\+Shooting\+Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o tabuleiro para disparos, mostrando os tiros efetuados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \& \mbox{\hyperlink{classTabuleiro_a7f5e0dbc58e68aacb0db32ce47f3f504}{operator=}} (const \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTabuleiro_a98a5e9451177ea9c0726e205b98381d8}{posicionar\+Navio}} (\mbox{\hyperlink{classNavio}{Navio}} $\ast$navio)
+\begin{DoxyCompactList}\small\item\em Posiciona um navio no tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classTabuleiro_ad2006fd00e8130be27b6350310de1943}{tabuleiro}} \mbox{[}\mbox{\hyperlink{classTabuleiro_ab144e2441feee99deebc28d234e5ed04}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{classTabuleiro_a6c8038936f4564609d48b2cefc86e473}{COLS}}\mbox{]}
+\item 
+std\+::string \mbox{\hyperlink{classTabuleiro_ad02a6b63f37c81ee0406e687f33e87e9}{nome}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classNavio}{Navio}} $\ast$ $>$ \mbox{\hyperlink{classTabuleiro_a00b75b6b3969362cf6578769010b804e}{navios}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classTabuleiro_ab144e2441feee99deebc28d234e5ed04}{ROWS}} = 10
+\item 
+static const int \mbox{\hyperlink{classTabuleiro_a6c8038936f4564609d48b2cefc86e473}{COLS}} = 10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa o tabuleiro do jogo de batalha naval. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}\label{classTabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}} 
+\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{Tabuleiro()}{Tabuleiro()}}
+{\footnotesize\ttfamily Tabuleiro\+::\+Tabuleiro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \mbox{\hyperlink{classTabuleiro}{Tabuleiro}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTabuleiro_ae6cc4777e3477acc06b93e76c61ca277}\label{classTabuleiro_ae6cc4777e3477acc06b93e76c61ca277}} 
+\index{Tabuleiro@{Tabuleiro}!afundouTudo@{afundouTudo}}
+\index{afundouTudo@{afundouTudo}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{afundouTudo()}{afundouTudo()}}
+{\footnotesize\ttfamily bool Tabuleiro\+::afundou\+Tudo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se todos os navios do tabuleiro foram afundados. 
+
+\begin{DoxyReturn}{Returns}
+true se todos os navios foram afundados, false caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTabuleiro_a9d6bef6bb578047b989598abafcceab5}\label{classTabuleiro_a9d6bef6bb578047b989598abafcceab5}} 
+\index{Tabuleiro@{Tabuleiro}!atirar@{atirar}}
+\index{atirar@{atirar}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{atirar()}{atirar()}}
+{\footnotesize\ttfamily bool Tabuleiro\+::atirar (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Realiza um tiro no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A coordenada x do tiro. \\
+\hline
+{\em y} & A coordenada y do tiro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o tiro acertar algum navio, false caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTabuleiro_a3daf1d20708a00eb111b920d4c7d1c1f}\label{classTabuleiro_a3daf1d20708a00eb111b920d4c7d1c1f}} 
+\index{Tabuleiro@{Tabuleiro}!getNavios@{getNavios}}
+\index{getNavios@{getNavios}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getNavios()}{getNavios()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classNavio}{Navio}} $\ast$ $>$ Tabuleiro\+::get\+Navios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classTabuleiro_a6178bf7e909d4d2edc9e0ea8f9a5abb8}\label{classTabuleiro_a6178bf7e909d4d2edc9e0ea8f9a5abb8}} 
+\index{Tabuleiro@{Tabuleiro}!getNome@{getNome}}
+\index{getNome@{getNome}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Tabuleiro\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTabuleiro_aeea01d15d87fc8c02f25817472c529f2}\label{classTabuleiro_aeea01d15d87fc8c02f25817472c529f2}} 
+\index{Tabuleiro@{Tabuleiro}!getTabuleiro@{getTabuleiro}}
+\index{getTabuleiro@{getTabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getTabuleiro()}{getTabuleiro()}}
+{\footnotesize\ttfamily char($\ast$ Tabuleiro\+::get\+Tabuleiro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}))\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{classTabuleiro_a7f5e0dbc58e68aacb0db32ce47f3f504}\label{classTabuleiro_a7f5e0dbc58e68aacb0db32ce47f3f504}} 
+\index{Tabuleiro@{Tabuleiro}!operator=@{operator=}}
+\index{operator=@{operator=}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \& Tabuleiro\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTabuleiro_a21a744fa5191f8b1be2b8e7f7dbc5262}\label{classTabuleiro_a21a744fa5191f8b1be2b8e7f7dbc5262}} 
+\index{Tabuleiro@{Tabuleiro}!podePosicionarNavio@{podePosicionarNavio}}
+\index{podePosicionarNavio@{podePosicionarNavio}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{podePosicionarNavio()}{podePosicionarNavio()}}
+{\footnotesize\ttfamily bool Tabuleiro\+::pode\+Posicionar\+Navio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNavio}{Navio}} $\ast$}]{navio }\end{DoxyParamCaption})}
+
+
+
+Verifica se é possível posicionar um navio no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em navio} & O navio a ser posicionado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se for possível posicionar o navio, false caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTabuleiro_a98a5e9451177ea9c0726e205b98381d8}\label{classTabuleiro_a98a5e9451177ea9c0726e205b98381d8}} 
+\index{Tabuleiro@{Tabuleiro}!posicionarNavio@{posicionarNavio}}
+\index{posicionarNavio@{posicionarNavio}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{posicionarNavio()}{posicionarNavio()}}
+{\footnotesize\ttfamily void Tabuleiro\+::posicionar\+Navio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNavio}{Navio}} $\ast$}]{navio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Posiciona um navio no tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em navio} & O navio a ser posicionado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTabuleiro_a9abbedce5873229a003f552f5f4a8542}\label{classTabuleiro_a9abbedce5873229a003f552f5f4a8542}} 
+\index{Tabuleiro@{Tabuleiro}!posicionarNavios@{posicionarNavios}}
+\index{posicionarNavios@{posicionarNavios}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{posicionarNavios()}{posicionarNavios()}}
+{\footnotesize\ttfamily void Tabuleiro\+::posicionar\+Navios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Posiciona os navios no tabuleiro. 
+
+\mbox{\Hypertarget{classTabuleiro_a2e3d79973ee48861fe34ffdde72dd393}\label{classTabuleiro_a2e3d79973ee48861fe34ffdde72dd393}} 
+\index{Tabuleiro@{Tabuleiro}!posicionarNaviosRandomly@{posicionarNaviosRandomly}}
+\index{posicionarNaviosRandomly@{posicionarNaviosRandomly}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{posicionarNaviosRandomly()}{posicionarNaviosRandomly()}}
+{\footnotesize\ttfamily void Tabuleiro\+::posicionar\+Navios\+Randomly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Posiciona os navios aleatoriamente no tabuleiro. 
+
+\mbox{\Hypertarget{classTabuleiro_a10b2f905afbdd33b7121ca44160bcdbe}\label{classTabuleiro_a10b2f905afbdd33b7121ca44160bcdbe}} 
+\index{Tabuleiro@{Tabuleiro}!printShootingTabuleiro@{printShootingTabuleiro}}
+\index{printShootingTabuleiro@{printShootingTabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{printShootingTabuleiro()}{printShootingTabuleiro()}}
+{\footnotesize\ttfamily void Tabuleiro\+::print\+Shooting\+Tabuleiro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o tabuleiro para disparos, mostrando os tiros efetuados. 
+
+\mbox{\Hypertarget{classTabuleiro_a40a471465e6f3271f961ac72227c1ac4}\label{classTabuleiro_a40a471465e6f3271f961ac72227c1ac4}} 
+\index{Tabuleiro@{Tabuleiro}!printTabuleiroNavio@{printTabuleiroNavio}}
+\index{printTabuleiroNavio@{printTabuleiroNavio}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{printTabuleiroNavio()}{printTabuleiroNavio()}}
+{\footnotesize\ttfamily void Tabuleiro\+::print\+Tabuleiro\+Navio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o tabuleiro com a posição dos navios. 
+
+\mbox{\Hypertarget{classTabuleiro_a07bebda1e168c66ebc03c3e5928f744a}\label{classTabuleiro_a07bebda1e168c66ebc03c3e5928f744a}} 
+\index{Tabuleiro@{Tabuleiro}!setNavios@{setNavios}}
+\index{setNavios@{setNavios}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{setNavios()}{setNavios()}}
+{\footnotesize\ttfamily void Tabuleiro\+::set\+Navios (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classNavio}{Navio}} $\ast$ $>$ \&}]{navios }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTabuleiro_a1f2938baab531a89f5e18301255695b5}\label{classTabuleiro_a1f2938baab531a89f5e18301255695b5}} 
+\index{Tabuleiro@{Tabuleiro}!setNome@{setNome}}
+\index{setNome@{setNome}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Tabuleiro\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTabuleiro_a6c8038936f4564609d48b2cefc86e473}\label{classTabuleiro_a6c8038936f4564609d48b2cefc86e473}} 
+\index{Tabuleiro@{Tabuleiro}!COLS@{COLS}}
+\index{COLS@{COLS}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{COLS}{COLS}}
+{\footnotesize\ttfamily const int Tabuleiro\+::\+COLS = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTabuleiro_a00b75b6b3969362cf6578769010b804e}\label{classTabuleiro_a00b75b6b3969362cf6578769010b804e}} 
+\index{Tabuleiro@{Tabuleiro}!navios@{navios}}
+\index{navios@{navios}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{navios}{navios}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classNavio}{Navio}}$\ast$$>$ Tabuleiro\+::navios\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTabuleiro_ad02a6b63f37c81ee0406e687f33e87e9}\label{classTabuleiro_ad02a6b63f37c81ee0406e687f33e87e9}} 
+\index{Tabuleiro@{Tabuleiro}!nome@{nome}}
+\index{nome@{nome}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily std\+::string Tabuleiro\+::nome\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTabuleiro_ab144e2441feee99deebc28d234e5ed04}\label{classTabuleiro_ab144e2441feee99deebc28d234e5ed04}} 
+\index{Tabuleiro@{Tabuleiro}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily const int Tabuleiro\+::\+ROWS = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTabuleiro_ad2006fd00e8130be27b6350310de1943}\label{classTabuleiro_ad2006fd00e8130be27b6350310de1943}} 
+\index{Tabuleiro@{Tabuleiro}!tabuleiro@{tabuleiro}}
+\index{tabuleiro@{tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{tabuleiro}{tabuleiro}}
+{\footnotesize\ttfamily char Tabuleiro\+::tabuleiro\mbox{[}\mbox{\hyperlink{classTabuleiro_ab144e2441feee99deebc28d234e5ed04}{ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{classTabuleiro_a6c8038936f4564609d48b2cefc86e473}{COLS}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tabuleiro/\mbox{\hyperlink{Tabuleiro_8hpp}{Tabuleiro.\+hpp}}\item 
+src/\+Tabuleiro/\mbox{\hyperlink{Tabuleiro_8cpp}{Tabuleiro.\+cpp}}\end{DoxyCompactItemize}

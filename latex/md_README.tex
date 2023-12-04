@@ -1,0 +1,94 @@
+O projeto consiste na criação de um jogo de Batalha Naval, escrito em C++ e utilizando os conceitos de Programação Orientada a Objeto. O jogo envolve dois jogadores que posicionam suas próprias peças -\/ navios -\/ e tentam atacar as peças adversárias em um tabuleiro de tamanho 10x10. Vence quem afundar todos os navios opositores primeiro.\hypertarget{md_README_autotoc_md1}{}\doxysection{Relevancia}\label{md_README_autotoc_md1}
+Construir o jogo Batalha Naval é muito relevante para nosso grupo por diversos motivos, entre eles\+: {\bfseries{Domínio da Linguagem C++\+:}} Criar um projeto de Batalha Naval em C++ oferece uma oportunidade para aprender e aplicar os princípios essenciais da linguagem de programação C++, incluindo a sintaxe, estruturas de controle, funções, classes e objetos.
+
+{\bfseries{Aplicação de Algoritmos e Estruturas de Dados\+:}} Implementar a lógica da Batalha Naval requer a aplicação eficiente de algoritmos e estruturas de dados. Isso pode envolver a manipulação de matrizes para representar o tabuleiro e o uso de algoritmos de busca para determinar os resultados dos ataques, entre outros.
+
+{\bfseries{Desenvolvimento de Habilidades de Resolução de Problemas\+:}} Criar um jogo como a Batalha Naval exige habilidades analíticas e de resolução de problemas. Os desafios incluem posicionar os navios estrategicamente, gerenciar a lógica do jogo e determinar quando um navio foi afundado.
+
+{\bfseries{Compreensão de Jogos e Lógica de \mbox{\hyperlink{classJogo}{Jogo}}\+:}} Ao criar um jogo, é possível adquirir uma compreensão mais profunda da lógica dos jogos, como as regras e a interação do jogador. Isso é valioso para quem tem interesse em programação de jogos.
+
+{\bfseries{Aplicação Prática de Conceitos Teóricos\+:}} O projeto permite a aplicação prática de conceitos teóricos aprendidos em cursos de algoritmos, estruturas de dados e programação.\hypertarget{md_README_autotoc_md2}{}\doxysection{Objetivo}\label{md_README_autotoc_md2}
+O principal objetivo do nosso projeto é aplicar os conhecimentos adquiridos nas aulas de Programação e Desenvolvimento de Software II (PDS II) para criar um programa interativo e divertido, por isso optamos por desenvolver o jogo Batalha Naval, que, inclusive, pode ser expandido futuramente para incluir funcionalidades avançadas, como inteligência artificial para oponentes controlados pelo computador, proporcionando uma oportunidade para aprimoramento contínuo e inovação.\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Ferramentas}\label{md_README_autotoc_md3}
+Esse projeto utiliza as seguintes linguagem, ferramentas e bibliotecas\+:
+
+Linguagem\+: C++11 Compilação\+: Make Documentação\+: Doxygen Testes Unitários\+: Doctest Cobertura\+: gcovr\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Requisitos}\label{md_README_autotoc_md4}
+Certifique-\/se de ter um compilador C++ instalado em sua máquina antes de executar o jogo.\hypertarget{md_README_autotoc_md5}{}\doxysubsection{Compilação}\label{md_README_autotoc_md5}
+\$ make Atenção\+: Criar antes um diretório ./build/\hypertarget{md_README_autotoc_md6}{}\doxysubsection{Execução}\label{md_README_autotoc_md6}
+\$ make run\hypertarget{md_README_autotoc_md7}{}\doxysubsection{Compilação Testes}\label{md_README_autotoc_md7}
+$\ast$\+Completar\hypertarget{md_README_autotoc_md8}{}\doxysubsection{Documentação}\label{md_README_autotoc_md8}
+É necessário ter na raiz do projeto um arquivo Doxyfile. Um arquivo padrão pode ser gerado pelo comando\+:
+
+\$ doxygen -\/g
+
+Abaixo a lista de flags que foram modificadas no arquivo original.
+
+PROJECT\+\_\+\+NAME = \char`\"{}\+Batalha\+Naval\+PDS2\char`\"{}
+
+OUTPUT\+\_\+\+DIRECTORY = doc/
+
+RECURSIVE = YES
+
+EXTRACT\+\_\+\+ALL = YES EXTRACT\+\_\+\+PRIVATE = YES EXTRACT\+\_\+\+STATIC = YES
+
+HAVE\+\_\+\+DOT = NO Para gerar a documentação, utilizar\+:
+
+\$ doxygen Doxyfile ou
+
+\$ make documentation Atenção\+: Criar antes um diretório ./doc/
+
+Remover arquivos auxiliares \$ make clean\hypertarget{md_README_autotoc_md9}{}\doxysubsection{Como Jogar}\label{md_README_autotoc_md9}
+
+\begin{DoxyEnumerate}
+\item Clone este repositório em sua máquina local.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item git clone https\+:\mbox{[}(\href{https://github.com/mariacferreirab/BatalhaNavalPDS2.git}{\texttt{ https\+://github.\+com/mariacferreirab/\+Batalha\+Naval\+PDS2.\+git}})\mbox{]}
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Navegue até o diretório do projeto.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item cd Batalha\+Naval\+PDS2
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Execute o arquivo principal do jogo.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item g++ $\ast$.cpp -\/o main
+\item e depois adicione
+\item ./main
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item O jogo começará e será solicitado que cada jogador insira as coordenadas de ataque em seu turno.
+\item O jogo começará e será solicitado que cada jogador insira as coordenadas de ataque em seu turno.
+\item Os jogadores devem alternar seus turnos até que todos os navios de um dos jogadores sejam destruídos.
+\item O jogo exibirá o resultado final e o jogador vencedor.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md10}{}\doxysubsection{Regras}\label{md_README_autotoc_md10}
+O jogo acontece entre dois jogadores, com cada jogador possuindo dois tabuleiros\+: um para posicionar seus próprios navios e outro para registrar seus tiros no tabuleiro adversário. As colunas são numeradas de 0 a 9, e as linhas são identificadas com letras maiúsculas entre A e J.
+
+As regras são\+:
+
+
+\begin{DoxyEnumerate}
+\item Cada jogador tem um tabuleiro 10x10, representado por coordenadas de A1 a J10.
+\item Cada jogador posiciona seus navios no tabuleiro antes do início do jogo. Os tipos de navios e seu tamanho são\+:
+\begin{DoxyItemize}
+\item Encouraçado (4 células)
+\item \mbox{\hyperlink{classCruzador}{Cruzador}} (3 células)
+\item \mbox{\hyperlink{classContratorpedeiro}{Contratorpedeiro}} (6 células)
+\item \mbox{\hyperlink{classSubmarino}{Submarino}} (2 células)
+\end{DoxyItemize}
+\item Os navios podem ser posicionados horizontalmente ou verticalmente, desde que possuam um espaço vago entre eles.
+\item Uma vez posicionados os navios, os jogadores se alternam em atirar no tabuleiro do oponente. Para isso, são informadas as coordenadas da posição escolhida (ex\+: \char`\"{}\+A5\char`\"{}).
+\item Se um tiro não acertar uma peça, o jogo indica acerto em \char`\"{}água\char`\"{}.
+\item Se um tiro acerta uma peça, o jogo indica \char`\"{}acertou\char`\"{}.
+\item Se todos os espaços do navio forem acertados, o navio é indicado como \char`\"{}afundado\char`\"{}.
+\item O jogo continua até que todos os navios de um dos jogadores sejam afundados, quando acaba o jogo.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md11}{}\doxysubsection{Dificuldades}\label{md_README_autotoc_md11}
+$\ast$\+Completar\hypertarget{md_README_autotoc_md12}{}\doxysubsection{Autores}\label{md_README_autotoc_md12}
+
+\begin{DoxyItemize}
+\item \mbox{[}Mariana Villefort\mbox{]} \href{https://github.com/MarianaVRabelo}{\texttt{ https\+://github.\+com/\+Mariana\+VRabelo}}
+\item \mbox{[}Maria Clara Ferreira\mbox{]} \href{https://github.com/mariacferreirab}{\texttt{ https\+://github.\+com/mariacferreirab}}
+\item \mbox{[}Valentina Perpetuo\mbox{]} \href{https://github.com/valentinavps}{\texttt{ https\+://github.\+com/valentinavps}} 
+\end{DoxyItemize}

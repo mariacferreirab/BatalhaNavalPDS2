@@ -1,0 +1,136 @@
+\hypertarget{classJogo}{}\doxysection{Jogo Class Reference}
+\label{classJogo}\index{Jogo@{Jogo}}
+
+
+Classe \mbox{\hyperlink{classJogo}{Jogo}} usada para gerenciar o jogo e seus componentes.  
+
+
+
+
+{\ttfamily \#include $<$Jogo.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classJogo_ada6b127710abe5e25240b09b1a13b502}{Jogo}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. Cria um novo objeto \mbox{\hyperlink{classJogo}{Jogo}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJogo_aeae0661846a8022dc1998e6ac7a087a4}{set\+Tabuleiro}} (const \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \&jogador, int numero)
+\begin{DoxyCompactList}\small\item\em Define o tabuleiro do jogo para um jogador específico. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \& \mbox{\hyperlink{classJogo_aa31c1e5372eb40175f167250bde28c41}{get\+Tabuleiro}} (int numero)
+\begin{DoxyCompactList}\small\item\em Obtém o tabuleiro do jogo de um jogador específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJogo_a7681947d748def0e5da304470647f215}{salvar\+Jogo}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Salva o estado atual do jogo em um arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJogo_a5dd5a979c83f900e9f8b523e02770c0f}{carregar\+Jogo}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Carrega um jogo previamente salvo de um arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \mbox{\hyperlink{classJogo_adb151105577d841dd622472b0820a762}{jogador1}}
+\item 
+\mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \mbox{\hyperlink{classJogo_aaf358f4deaf3116311ff240d09ee1fd3}{jogador2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{classJogo}{Jogo}} usada para gerenciar o jogo e seus componentes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJogo_ada6b127710abe5e25240b09b1a13b502}\label{classJogo_ada6b127710abe5e25240b09b1a13b502}} 
+\index{Jogo@{Jogo}!Jogo@{Jogo}}
+\index{Jogo@{Jogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{Jogo()}{Jogo()}}
+{\footnotesize\ttfamily Jogo\+::\+Jogo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão. Cria um novo objeto \mbox{\hyperlink{classJogo}{Jogo}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJogo_a5dd5a979c83f900e9f8b523e02770c0f}\label{classJogo_a5dd5a979c83f900e9f8b523e02770c0f}} 
+\index{Jogo@{Jogo}!carregarJogo@{carregarJogo}}
+\index{carregarJogo@{carregarJogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{carregarJogo()}{carregarJogo()}}
+{\footnotesize\ttfamily void Jogo\+::carregar\+Jogo (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Carrega um jogo previamente salvo de um arquivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & O nome do arquivo para carregar o jogo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJogo_aa31c1e5372eb40175f167250bde28c41}\label{classJogo_aa31c1e5372eb40175f167250bde28c41}} 
+\index{Jogo@{Jogo}!getTabuleiro@{getTabuleiro}}
+\index{getTabuleiro@{getTabuleiro}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{getTabuleiro()}{getTabuleiro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \& Jogo\+::get\+Tabuleiro (\begin{DoxyParamCaption}\item[{int}]{numero }\end{DoxyParamCaption})}
+
+
+
+Obtém o tabuleiro do jogo de um jogador específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & O número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O tabuleiro do jogador especificado. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJogo_a7681947d748def0e5da304470647f215}\label{classJogo_a7681947d748def0e5da304470647f215}} 
+\index{Jogo@{Jogo}!salvarJogo@{salvarJogo}}
+\index{salvarJogo@{salvarJogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{salvarJogo()}{salvarJogo()}}
+{\footnotesize\ttfamily void Jogo\+::salvar\+Jogo (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Salva o estado atual do jogo em um arquivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & O nome do arquivo para salvar o jogo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJogo_aeae0661846a8022dc1998e6ac7a087a4}\label{classJogo_aeae0661846a8022dc1998e6ac7a087a4}} 
+\index{Jogo@{Jogo}!setTabuleiro@{setTabuleiro}}
+\index{setTabuleiro@{setTabuleiro}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{setTabuleiro()}{setTabuleiro()}}
+{\footnotesize\ttfamily void Jogo\+::set\+Tabuleiro (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} \&}]{jogador,  }\item[{int}]{numero }\end{DoxyParamCaption})}
+
+
+
+Define o tabuleiro do jogo para um jogador específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador} & O tabuleiro a ser definido. \\
+\hline
+{\em numero} & O número do jogador (1 ou 2). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classJogo_adb151105577d841dd622472b0820a762}\label{classJogo_adb151105577d841dd622472b0820a762}} 
+\index{Jogo@{Jogo}!jogador1@{jogador1}}
+\index{jogador1@{jogador1}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{jogador1}{jogador1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} Jogo\+::jogador1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classJogo_aaf358f4deaf3116311ff240d09ee1fd3}\label{classJogo_aaf358f4deaf3116311ff240d09ee1fd3}} 
+\index{Jogo@{Jogo}!jogador2@{jogador2}}
+\index{jogador2@{jogador2}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{jogador2}{jogador2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTabuleiro}{Tabuleiro}} Jogo\+::jogador2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Jogo/\mbox{\hyperlink{Jogo_8hpp}{Jogo.\+hpp}}\item 
+src/\+Jogo/\mbox{\hyperlink{Jogo_8cpp}{Jogo.\+cpp}}\end{DoxyCompactItemize}
