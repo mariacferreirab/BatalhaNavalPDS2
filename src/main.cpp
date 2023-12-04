@@ -25,16 +25,16 @@ void displayTurnsMenu()
 	std::cout << "Insira a opcao selecionada: ";
 }
 
-void battle(Game game)
+void battle(Jogo jogo)
 {
-	Tabuleiro player1 = game.getTabuleiro(1);
-	Tabuleiro player2 = game.getTabuleiro(2);
-	bool gameOver = false;
+	Tabuleiro player1 = jogo.getTabuleiro(1);
+	Tabuleiro player2 = jogo.getTabuleiro(2);
+	bool jogoOver = false;
 	bool player1Turn = true;
 	int turnsCounter = 0;
 	int minTurns = 15; // numero minimo de rodadas para vencer.No minimo a soma do tam de todos os navios
 	int menuOp = 0;
-	while (!gameOver)
+	while (!jogoOver)
 	{
 		// A primeira vez não acontece o display do menu
 		if (turnsCounter == 0)
@@ -163,7 +163,7 @@ void battle(Game game)
 			std::cout << "Insira o nome do arquivo: ";
 			std::cin >> fileNome;
 			std::string finalPath = path + fileNome + ext;
-			game.salvarJogo(finalPath);
+			jogo.salvarJogo(finalPath);
 			std::cout << "Jogo salvo em: " << finalPath << std::endl;
 		} else
 		{
@@ -179,7 +179,7 @@ void battle(Game game)
 			player1.printTabuleiroNavio();
 			player2.printShootingTabuleiro();
 			std::cout << "Parabens " << player1.getNome() << " voce eh o campeao." << std::endl;
-			gameOver = true;
+			jogoOver = true;
 		} else if (turnsCounter > minTurns && player1.afundouTudo())
 		{
 			std::cout << std::endl;
@@ -188,7 +188,7 @@ void battle(Game game)
 			player2.printTabuleiroNavio();
 			player1.printShootingTabuleiro();
 			std::cout << "Parabens " << player2.getNome() << " voce eh o campeao." << std::endl;
-			gameOver = true;
+			jogoOver = true;
 		}
 
 		++turnsCounter;
@@ -197,9 +197,9 @@ void battle(Game game)
 	std::cout << "FIM DE JOGO." << std::endl;
 }
 
-void startNewGame()
+void startNewJogo()
 {
-	Game game;
+	Jogo jogo;
 
 	//INI Tabuleiro1 navios
 	Tabuleiro player1;
@@ -230,8 +230,8 @@ void startNewGame()
 	//player2.posicionarNaviosRandomly();
 	//FIm Tabuleiro2 navios
 
-	game.setTabuleiro(player1, 1);
-	game.setTabuleiro(player2, 2);
+	jogo.setTabuleiro(player1, 1);
+	jogo.setTabuleiro(player2, 2);
 
 	//INicia a batalha
 	std::cout << std::endl;
@@ -239,7 +239,7 @@ void startNewGame()
 	//waitForSeconds(10);
 	system("cls");
 
-	battle(game);
+	battle(jogo);
 	//Fim da batalha
 }
 
@@ -283,7 +283,7 @@ int main()
 				case 1:
 					std::cout << "Iniciando um novo jogo..." << std::endl;
 					system("CLS");
-					startNewGame();
+					startNewJogo();
 					break;
 				case 2:
 					std::cout << "Saindo do programa..." << std::endl;
