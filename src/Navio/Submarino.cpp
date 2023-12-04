@@ -1,4 +1,4 @@
-#include "Submarino.h"
+#include "Submarino.hpp"
 
 Submarino::Submarino()
 {

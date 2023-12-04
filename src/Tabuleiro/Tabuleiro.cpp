@@ -1,6 +1,7 @@
 #include "Tabuleiro.hpp"
 #include <iostream>
 #include <algorithm>
+#include <limits>
 
 Tabuleiro::Tabuleiro()
 {

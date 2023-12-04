@@ -12,14 +12,11 @@ THIRD_DIR = ./third_party
 
 all: ${BUILD_DIR}/${TARGET}
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/Jogo.o ${BUILD_DIR}/Jogador.o ${BUILD_DIR}/Navio.o ${BUILD_DIR}/Tabuleiro.o ${BUILD_DIR}/Contratorpedeiro.o ${BUILD_DIR}/Cruzador.o ${BUILD_DIR}/Encouracado.o ${BUILD_DIR}/Submarino.o ${BUILD_DIR}/main.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/Jogo.o ${BUILD_DIR}/Navio.o ${BUILD_DIR}/Tabuleiro.o ${BUILD_DIR}/Contratorpedeiro.o ${BUILD_DIR}/Cruzador.o ${BUILD_DIR}/Encouracado.o ${BUILD_DIR}/Submarino.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
 
 ${BUILD_DIR}/Jogo.o: ${INCLUDE_DIR}/Jogo/Jogo.hpp ${SRC_DIR}/Jogo/Jogo.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/Jogo/ -I ${INCLUDE_DIR}/Tabuleiro/ -I ${INCLUDE_DIR}/Navio/ -c ${SRC_DIR}/Jogo/Jogo.cpp -o ${BUILD_DIR}/Jogo.o
-
-${BUILD_DIR}/Jogador.o: ${INCLUDE_DIR}/Jogador/Jogador.hpp ${SRC_DIR}/Jogador/Jogador.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/Jogador/ -c ${SRC_DIR}/Jogador/Jogador.cpp -o ${BUILD_DIR}/Jogador.o
 
 ${BUILD_DIR}/Navio.o: ${INCLUDE_DIR}/Navio/Navio.hpp ${INCLUDE_DIR}/Navio/Navio.hpp ${SRC_DIR}/Navio/Navio.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/Navio/ -c ${SRC_DIR}/Navio/Navio.cpp -o ${BUILD_DIR}/Navio.o

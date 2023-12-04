@@ -1,4 +1,4 @@
-#include "Cruzador.h"
+#include "Cruzador.hpp"
 
 Cruzador::Cruzador() {
     nome = "Cruzador";

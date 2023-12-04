@@ -1,4 +1,4 @@
-#include "Encouracado.h"
+#include "Encouracado.hpp"
 
 Encouracado::Encouracado() : Navio() {
     nome = "Encouracado";
