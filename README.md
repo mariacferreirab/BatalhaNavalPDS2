@@ -47,7 +47,35 @@ $ make run
 
 ### Compilação Testes
 
-*Completar
+$ make tests Execução Testes $ make run_tests Relatório de Cobertura Para imprimir o relatório simplificado no próprio Terminal, utilizar:
+
+$ make coverage Para gerar o relatório em HTML, utilizar:
+
+$ make html_coverage Atenção: Criar antes um diretório ./coverage/
+
+Documentação É necessário ter na raiz do projeto um arquivo Doxyfile. Um arquivo padrão pode ser gerado pelo comando:
+
+$ doxygen -g Abaixo a lista de flags que foram modificadas no arquivo original.
+
+PROJECT_NAME = "BatalhaNavalPDS2"
+
+OUTPUT_DIRECTORY = doc/
+
+RECURSIVE = YES
+
+EXTRACT_ALL = YES EXTRACT_PRIVATE = YES EXTRACT_STATIC = YES
+
+HAVE_DOT = NO 
+
+Para gerar a documentação, utilizar:
+
+$ doxygen Doxyfile ou
+
+$ make documentation 
+
+Atenção: Criar antes um diretório ./doc/
+
+Remover arquivos auxiliares $ make clean
 
 ### Documentação
 É necessário ter na raiz do projeto um arquivo Doxyfile. Um arquivo padrão pode ser gerado pelo comando:
