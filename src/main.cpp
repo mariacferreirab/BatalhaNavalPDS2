@@ -196,3 +196,113 @@ void battle(Game game)
 	std::cout << std::endl;
 	std::cout << "FIM DE JOGO." << std::endl;
 }
+
+void startNewGame()
+{
+	Game game;
+
+	//INI Tabuleiro1 navios
+	Tabuleiro player1;
+	std::cout << "Insira o nome do Jogador 1: ";
+	std::string name1;
+	std::cin >> name1;
+	player1.setNome(name1);
+	//Posicionar navios
+	system("CLS");
+	player1.posicionarNavios();
+	//player1.posicionarNaviosRandomly();
+	//FInal Tabuleiro1 navios
+
+	std::cout << std::endl;
+	//cout << "Tabuleiro 2's be ready to place the ships in... " << endl;
+	//waitForSeconds(5);
+	system("cls");
+
+	//INI Tabuleiro2 navios
+	Tabuleiro player2;
+	std::cout << "Insira o nome do Jogador 2: ";
+	std::string name2;
+	std::cin >> name2;
+	player2.setNome(name2);
+	//Posicionar navios
+	system("CLS");
+	player2.posicionarNavios();
+	//player2.posicionarNaviosRandomly();
+	//FIm Tabuleiro2 navios
+
+	game.setTabuleiro(player1, 1);
+	game.setTabuleiro(player2, 2);
+
+	//INicia a batalha
+	std::cout << std::endl;
+	std::cout << "A batalha comecou!" << std::endl;
+	//waitForSeconds(10);
+	system("cls");
+
+	battle(game);
+	//Fim da batalha
+}
+
+void displayMenu()
+{
+	std::cout << "Bem vindo ao jogo! Por favor, insira uma opcao:" << std::endl;
+	std::cout << "1. Novo jogo" << std::endl;
+	std::cout << "2. Sair" << std::endl;
+	std::cout << "Insira a opcao escolhida: ";
+}
+
+int main()
+{
+	bool validOp = false;
+	int menuOption;
+	while (!validOp)
+	{
+		try
+		{
+			displayMenu();
+			std::cin >> menuOption;
+			if (std::cin.fail())
+			{
+				throw std::invalid_argument("O input nao eh um numero");
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+				continue;
+			}
+			if (menuOption < 1 || menuOption > 2)
+			{
+				throw std::invalid_argument("Escolha uma opçao entre 1 e 2");
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+				continue;
+			}
+			validOp = true;
+			switch (menuOption)
+			{
+				case 1:
+					std::cout << "Iniciando um novo jogo..." << std::endl;
+					system("CLS");
+					startNewGame();
+					break;
+				case 2:
+					std::cout << "Saindo do programa..." << std::endl;
+					return 0;
+				default:
+					system("cls");
+					std::cerr << "\033[1;31m" << "ERROR" << "\033[0m" << std::endl;
+					break;
+			}
+
+		} catch (const std::invalid_argument& e)
+		{
+			system("cls");
+			std::cerr << "\033[1;31m" << e.what() << "\033[0m" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<::std::streamsize>::max(), '\n');
+			continue;
+		}
+	}
+
+	return 0;
+}
