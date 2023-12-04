@@ -2,11 +2,11 @@
 #define TABULEIRO_H
 
 
-#include "Navio.h"
-#include "Contratorpedeiro.h"
-#include "Submarino.h"
-#include "Cruzador.h"
-#include "Encouracado.h"
+#include "Navio.hpp"
+#include "Contratorpedeiro.hpp"
+#include "Submarino.hpp"
+#include "Cruzador.hpp"
+#include "Encouracado.hpp"
 #include <algorithm>
 
 
