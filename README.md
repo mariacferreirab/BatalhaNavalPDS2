@@ -146,10 +146,6 @@ As regras são:
 7. Se todos os espaços do navio forem acertados, o navio é indicado como "afundado".
 8. O jogo continua até que todos os navios de um dos jogadores sejam afundados, quando acaba o jogo.
 
-### Dificuldades
-
-*Completar
-
 ### Autores
 
 - [Mariana Villefort] https://github.com/MarianaVRabelo
