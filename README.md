@@ -118,9 +118,9 @@ $ make clean
 
 3. Execute o arquivo principal do jogo.
 
-- g++ \*.cpp -o main
+- make
 - e depois adicione
-- ./main
+- make run
 
 4. O jogo começará e será solicitado que cada jogador insira as coordenadas de ataque em seu turno.
 5. O jogo começará e será solicitado que cada jogador insira as coordenadas de ataque em seu turno.
