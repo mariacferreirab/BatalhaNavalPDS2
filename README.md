@@ -146,7 +146,7 @@ As regras são:
 7. Se todos os espaços do navio forem acertados, o navio é indicado como "afundado".
 8. O jogo continua até que todos os navios de um dos jogadores sejam afundados, quando acaba o jogo.
 
-### Dificuldade
+### Dificuldades
 - Estruturar o projeto e definir as funções para que o jogo de batalha naval funcionasse da maneira correta;
 - Tivemos dificuldades em estrturar testes para o projeto.
 
