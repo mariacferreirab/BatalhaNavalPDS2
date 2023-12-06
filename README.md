@@ -116,13 +116,13 @@ $ make clean
 
 - cd BatalhaNavalPDS2
 
-3. Execute o arquivo principal do jogo.
+3. Execute o arquivo principal do jogo atraves do seguinyte comando:
 
 - make
-- e depois adicione
+4. E depois adicione o seguinte comando para rodar o programa:
+  
 - make run
 
-4. O jogo começará e será solicitado que cada jogador insira as coordenadas de ataque em seu turno.
 5. O jogo começará e será solicitado que cada jogador insira as coordenadas de ataque em seu turno.
 6. Os jogadores devem alternar seus turnos até que todos os navios de um dos jogadores sejam destruídos.
 7. O jogo exibirá o resultado final e o jogador vencedor.
