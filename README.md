@@ -1,5 +1,5 @@
 ## Jogo Batalha Naval
-
+...
 O projeto consiste na criação de um jogo de Batalha Naval, escrito em C++ e utilizando os conceitos de Programação Orientada a Objeto. O jogo envolve dois jogadores que posicionam suas próprias peças - navios - e tentam atacar as peças adversárias em um tabuleiro de tamanho 10x10. Vence quem afundar todos os navios opositores primeiro.
 
 ## Relevancia
